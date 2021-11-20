@@ -18,8 +18,13 @@ export class ViewController {
   @Get()
   public async showHome(@Req() req: Request, @Res() res: Response) {
     const parsedUrl = parse(req.url, true);
-    await this.viewService
-      .getNextServer()
-      .render(req, res, parsedUrl.pathname, Object.assign(parsedUrl.query));
+    const nextHandler = this.viewService.getNextServer().getRequestHandler();
+    try {
+      return await this.viewService
+        .getNextServer()
+        .render(req, res, parsedUrl.pathname, parsedUrl.query);
+    } catch (e) {
+      return await nextHandler(req, res, parsedUrl);
+    }
   }
 }
