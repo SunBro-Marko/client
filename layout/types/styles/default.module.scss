@@ -1,0 +1,28 @@
+.layout{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+.warning{
+    height: 20px;
+    background: rgb(187, 122, 2);
+    color: white;
+    font-size: 14px;
+}
+
+.header{
+    background: rgb(20, 147, 250);
+    color: white;
+    font-size: 14px;
+
+    height: 40px;
+}
+
+.footer{
+    background: rgb(20, 147, 250);
+    color: white;
+    font-size: 14px;
+
+    height: 40px;
+}

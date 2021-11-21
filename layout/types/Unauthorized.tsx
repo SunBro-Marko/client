@@ -1,12 +1,13 @@
 import { FC } from 'react'
+import styles from './styles/unauthorized.module.scss'
+import Image from 'next/image'
 
-const SomeLayout: FC = ({ children }) => {
+const UnauthorizedLayout: FC = ({ children }) => {
   return (
-    <div>
-      <h1>Какой то layout</h1>
-      {children}
+    <div className={styles.layout}>
+      <div className={styles.container}>{children}</div>
     </div>
   )
 }
 
-export default SomeLayout
+export default UnauthorizedLayout
