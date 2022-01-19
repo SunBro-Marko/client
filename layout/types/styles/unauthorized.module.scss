@@ -1,12 +1,3 @@
-.layout{
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr;
-    background: #1890ff;
-    grid-template-columns: 1fr 600px 1fr;
-}
-
-.container{
-    background: white;
-    grid-column: 2/2;
+.layout {
+  height: 100vh;
 }
